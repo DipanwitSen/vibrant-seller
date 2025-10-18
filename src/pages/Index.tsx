@@ -25,9 +25,11 @@ const Index = () => {
               <Plus className="h-4 w-4" />
               Create Bundle
             </Button>
-            <Button className="gap-2 bg-primary hover:bg-primary/90">
-              <Plus className="h-4 w-4" />
-              Add Product
+            <Button className="gap-2 bg-primary hover:bg-primary/90" asChild>
+              <a href="/products">
+                <Plus className="h-4 w-4" />
+                Add Product
+              </a>
             </Button>
           </div>
         </div>

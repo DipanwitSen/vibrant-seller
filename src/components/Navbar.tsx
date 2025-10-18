@@ -27,16 +27,19 @@ const Navbar = () => {
           
           <div className="hidden md:flex items-center gap-6">
             <a href="/" className="text-sm font-medium text-white/90 hover:text-white transition-colors">
-              Home
-            </a>
-            <a href="/dashboard" className="text-sm font-medium text-white hover:text-white transition-colors">
               Dashboard
             </a>
             <a href="/products" className="text-sm font-medium text-white/90 hover:text-white transition-colors">
-              Add Product
+              Products
             </a>
-            <a href="/chat" className="text-sm font-medium text-white/90 hover:text-white transition-colors">
-              Chat
+            <a href="/inventory" className="text-sm font-medium text-white/90 hover:text-white transition-colors">
+              Inventory
+            </a>
+            <a href="/orders" className="text-sm font-medium text-white/90 hover:text-white transition-colors">
+              Orders
+            </a>
+            <a href="/earnings" className="text-sm font-medium text-white/90 hover:text-white transition-colors">
+              Earnings
             </a>
           </div>
         </div>
@@ -55,9 +58,12 @@ const Navbar = () => {
             <DropdownMenuContent align="end" className="w-56">
               <DropdownMenuLabel>Seller Account</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Profile</DropdownMenuItem>
-              <DropdownMenuItem>Settings</DropdownMenuItem>
-              <DropdownMenuItem>Bank Details</DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <a href="/account">Profile & Settings</a>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <a href="/account">Bank Details</a>
+              </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem className="text-destructive">
                 <LogOut className="mr-2 h-4 w-4" />
