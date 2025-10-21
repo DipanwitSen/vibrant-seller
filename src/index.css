@@ -8,95 +8,147 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 43 100% 96%;
-    --foreground: 340 10% 20%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 340 10% 20%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 340 10% 20%;
-
-    --primary: 330 81% 60%;
+    /* Brand Colors */
+    --primary: 341 84% 52%;
+    --primary-dark: 341 76% 45%;
     --primary-foreground: 0 0% 100%;
+    --primary-text: 0 0% 100%;
 
-    --secondary: 43 100% 92%;
-    --secondary-foreground: 340 10% 20%;
+    /* Background Colors */
+    --background: 0 0% 94%;
+    --muted-background: 0 0% 89%;
+    --card: 0 0% 99%;
+    --card-hover: 0 0% 96%;
+    --card-foreground: 0 0% 10%;
+    --popover: 40 25% 97%;
+    --popover-foreground: 0 0% 10%;
 
-    --muted: 43 50% 90%;
-    --muted-foreground: 340 10% 45%;
+    /* Text Colors */
+    --foreground: 0 0% 10%;
+    --text: 0 0% 10%;
+    --text-muted: 0 0% 42%;
+    --muted-text: 0 0% 13%;
+    --card-text: 0 0% 0%;
+    --secondary-text: 0 0% 10%;
+    --accent-text: 0 0% 10%;
+    --muted-foreground: 0 0% 42%;
 
-    --accent: 174 62% 47%;
+    /* Secondary Colors */
+    --secondary: 0 0% 89%;
+    --secondary-foreground: 0 0% 10%;
+
+    /* Accent Colors */
+    --accent: 341 84% 52%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84% 60%;
+    /* Border & Input */
+    --border: 0 0% 91%;
+    --focus-border: 0 0% 42%;
+    --input: 0 0% 94%;
+    --ring: 341 84% 52%;
+
+    /* Destructive */
+    --destructive: 0 0% 0%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 43 30% 88%;
-    --input: 43 30% 88%;
-    --ring: 330 81% 60%;
+    /* Status Colors */
+    --success: 149 77% 43%;
+    --warning: 43 93% 58%;
+    --danger: 346 76% 51%;
 
-    --radius: 0.75rem;
-    
-    --chart-1: 330 81% 60%;
-    --chart-2: 174 62% 47%;
-    --chart-3: 43 100% 65%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 210 65% 60%;
+    /* Chart Colors */
+    --chart-1: 204 87% 53%;
+    --chart-2: 160 100% 36%;
+    --chart-3: 43 93% 58%;
+    --chart-4: 149 77% 43%;
+    --chart-5: 346 76% 51%;
 
+    /* Muted */
+    --muted: 0 0% 89%;
+
+    /* Design System */
+    --radius: 0.8rem;
+    --border-radius: 0.8rem;
+
+    /* Sidebar */
     --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
+    --sidebar-foreground: 0 0% 10%;
+    --sidebar-primary: 0 0% 10%;
     --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 0 0% 91%;
+    --sidebar-ring: 341 84% 52%;
   }
 
   .dark {
-    --background: 340 20% 12%;
-    --foreground: 43 20% 90%;
-
-    --card: 340 15% 16%;
-    --card-foreground: 43 20% 90%;
-
-    --popover: 340 15% 16%;
-    --popover-foreground: 43 20% 90%;
-
-    --primary: 330 81% 60%;
+    /* Brand Colors */
+    --primary: 341 84% 52%;
+    --primary-dark: 341 76% 45%;
     --primary-foreground: 0 0% 100%;
+    --primary-text: 0 0% 100%;
 
-    --secondary: 340 15% 20%;
-    --secondary-foreground: 43 20% 90%;
+    /* Background Colors */
+    --background: 0 0% 12%;
+    --muted-background: 0 0% 16%;
+    --card: 0 0% 16%;
+    --card-hover: 0 0% 20%;
+    --card-foreground: 0 0% 90%;
+    --popover: 0 0% 16%;
+    --popover-foreground: 0 0% 90%;
 
-    --muted: 340 15% 20%;
-    --muted-foreground: 43 10% 65%;
+    /* Text Colors */
+    --foreground: 0 0% 90%;
+    --text: 0 0% 90%;
+    --text-muted: 0 0% 65%;
+    --muted-text: 0 0% 80%;
+    --card-text: 0 0% 100%;
+    --secondary-text: 0 0% 90%;
+    --accent-text: 0 0% 90%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 174 62% 47%;
+    /* Secondary Colors */
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 90%;
+
+    /* Accent Colors */
+    --accent: 341 84% 52%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62% 50%;
+    /* Border & Input */
+    --border: 0 0% 24%;
+    --focus-border: 0 0% 60%;
+    --input: 0 0% 20%;
+    --ring: 341 84% 52%;
+
+    /* Destructive */
+    --destructive: 0 0% 20%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 340 15% 24%;
-    --input: 340 15% 24%;
-    --ring: 330 81% 60%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    /* Status Colors */
+    --success: 149 77% 43%;
+    --warning: 43 93% 58%;
+    --danger: 346 76% 51%;
+
+    /* Chart Colors */
+    --chart-1: 204 87% 53%;
+    --chart-2: 160 100% 36%;
+    --chart-3: 43 93% 58%;
+    --chart-4: 149 77% 43%;
+    --chart-5: 346 76% 51%;
+
+    /* Muted */
+    --muted: 0 0% 20%;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 341 84% 52%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 0 0% 16%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 0% 24%;
+    --sidebar-ring: 341 84% 52%;
   }
 }
 
