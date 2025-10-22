@@ -1,60 +1,48 @@
-🏪 ProtiMart Seller Portal
+# 🏪 ProtiMart Seller Portal
 
-A modern AI-assisted Seller Portal for the ProtiMart Marketplace, enabling sellers to manage KYC, product listings, inventory, orders, payouts, and analytics — all in one place.
+A modern **AI-assisted Seller Portal** for the **ProtiMart Marketplace**, enabling sellers to manage KYC, product listings, inventory, orders, payouts, and analytics — all in one place.
 
-🌐 Project URL: ProtiMart on Lovable
+🌐 **Project URL:** [ProtiMart on Lovable](https://lovable.dev/projects/15676691-8142-4a63-b0aa-bb17541e3611)  
+📦 **Version:** 1.0  
+🗓 **Last Updated:** October 22, 2025  
+🎨 **Theme:** Light (Default)
 
-📦 Version: 1.0
-🗓 Last Updated: October 22, 2025
-🎨 Theme: Light (Default)
+---
 
-📘 Table of Contents
+## 📘 Table of Contents
+- [Project Overview](#project-overview)
+- [Folder Structure](#folder-structure)
+- [Tech Stack](#tech-stack)
+- [Setup & Running](#setup--running)
+- [Environment Variables](#environment-variables)
+- [Coding Standards](#coding-standards)
+- [Color Standards](#color-standards)
+- [Component Guidelines](#component-guidelines)
+- [API & Backend](#api--backend)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [Contact / Support](#contact--support)
 
-🚀 Project Overview
+---
 
-📂 Folder Structure
+## 🚀 Project Overview
 
-🧠 Tech Stack
+**ProtiMart Seller Portal** empowers sellers with smart, AI-driven tools to manage their marketplace presence efficiently.
 
-⚙️ Setup & Running
+### ✨ Key Features
+- **AI-powered KYC Verification** (OCR + document parsing)
+- **AI Product Autofill** for instant product entry
+- **Inventory Management** with real-time low-stock alerts
+- **Order & Return Management** with tracking
+- **Earnings Dashboard** with payout summaries
+- **Chatbot & Voice Assistant** for seller support
+- **Analytics Dashboard** with sales insights and P&L graphs
 
-🔐 Environment Variables
+---
 
-🧩 Coding Standards
+## 📂 Folder Structure
 
-🎨 Color Standards
-
-🧱 Component Guidelines
-
-🖥️ API & Backend
-
-🚀 Deployment
-
-🤝 Contributing
-
-📧 Contact / Support
-
-🚀 Project Overview
-
-ProtiMart Seller Portal empowers sellers with smart, AI-driven tools to manage their marketplace presence efficiently.
-
-✨ Key Features
-
-AI-powered KYC Verification (OCR + document parsing)
-
-AI Product Autofill for instant product entry
-
-Inventory Management with real-time low-stock alerts
-
-Order & Return Management with tracking
-
-Earnings Dashboard with payout summaries
-
-Chatbot & Voice Assistant for seller support
-
-Analytics Dashboard with sales insights and P&L graphs
-
-📂 Folder Structure
+```bash
 /seller-app
 ├── .next/
 ├── node_modules/
@@ -136,14 +124,15 @@ Testing	Jest + React Testing Library + Playwright
 Authentication	Supabase Auth
 AI Services	OCR/AI Autofill (KYC + Product Data)
 Chatbot	Text + Voice (Speech-to-Text + TTS)
+
 ⚙️ Setup & Running
 🧩 Prerequisites
-
-Ensure Node.js and npm are installed.
-You can install Node via nvm
-.
+Ensure you have Node.js and npm installed.
+You can install Node via nvm:
+👉 Install nvm
 
 🔧 Steps
+
 # 1. Clone the repository
 git clone <YOUR_GIT_URL>
 cd seller-app
@@ -158,9 +147,8 @@ npm run dev
 npx prisma migrate dev
 
 🔐 Environment Variables
-
-Create a .env file in the project root:
-
+Create a .env file in the project root directory with the following content:
+env
 DATABASE_URL="postgresql://postgres:password@db.supabase.co:5432/postgres"
 REDIS_URL="redis://default:password@redis-host:port"
 SUPABASE_URL=<SUPABASE_URL>
@@ -194,6 +182,8 @@ Variable	Hex	Usage
 
 Example Usage:
 
+tsx
+Copy code
 <div className="bg-card border border-border text-text p-4 rounded-lg shadow-light">
   Product Card
 </div>
@@ -201,20 +191,17 @@ Example Usage:
 <button className="bg-primary text-primary-text hover:bg-primary-dark px-4 py-2 rounded">
   Add to Cart
 </button>
-
 🧱 Component Guidelines
+Product Cards: Show price, discount badge, health score, and allergen info.
 
-Product Cards: Show price, discount badge, health score, and allergen info
+Forms: Use multi-step layouts with AI autofill and focus highlights.
 
-Forms: Multi-step with AI autofill and focus highlights
+Analytics Graphs: Maintain standardized colors and hover tooltips.
 
-Analytics Graphs: Use standardized colors and tooltips
-
-Chatbot: Floating action button with text + voice input and subtle animations
+Chatbot: Floating action button with text and voice input; subtle animations.
 
 🖥️ API & Backend
-
-Architecture: REST-style via Next.js App Router
+Architecture: REST-style routes via Next.js App Router
 
 Validation: Zod schemas (validators.ts)
 
@@ -222,7 +209,7 @@ ORM: Prisma (PostgreSQL)
 
 Caching: Redis for analytics and sessions
 
-Integrated Services
+Integrated Services:
 
 AI (OCR + Autofill)
 
@@ -231,33 +218,27 @@ Payout Gateway
 Notification Service
 
 🚀 Deployment
-
-Open Lovable Dashboard
+Open the Lovable Dashboard
 
 Click Share → Publish
 
-(Optional) Connect a custom domain via
+(Optional) Connect a custom domain:
 Project → Settings → Domains → Connect Domain
 
-📘 Lovable Docs: Custom Domain Setup
+📘 Read Lovable Docs on Custom Domains
 
 🤝 Contributing
+Clone the repository and install dependencies.
 
-Clone the repo & install dependencies
-
-Follow the coding and color conventions
+Follow the coding and color conventions.
 
 Run tests before committing:
-
 npm run test
+Ensure accessibility and responsive design.
 
-
-Ensure accessibility and responsive design
-
-Submit a PR with a clear, descriptive summary
+Submit a PR with a clear, descriptive summary.
 
 📧 Contact / Support
-
 Maintainer: daliasen16@gmail.com
 
-🧬 ProtiMart Seller Portal — Empowering sellers with AI, simplicity, and insights.
+🧬 ProtiMart Seller Portal — Empowering sellers with AI, simplicity, and insights.table of content isnt pointing where i want 
