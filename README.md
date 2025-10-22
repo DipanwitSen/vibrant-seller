@@ -111,6 +111,7 @@ A modern **AI-assisted Seller Portal** for the **ProtiMart Marketplace**, enabli
 ├── package.json
 ├── tsconfig.json
 └── README.md
+
 🧠 Tech Stack
 Layer	Technology
 Framework	Next.js 15 (App Router)
@@ -131,8 +132,7 @@ You can install Node via nvm:
 👉 Install nvm
 
 🔧 Steps
-bash
-Copy code
+
 # 1. Clone the repository
 git clone <YOUR_GIT_URL>
 cd seller-app
@@ -145,15 +145,15 @@ npm run dev
 
 # 4. Run Prisma migrations
 npx prisma migrate dev
+
 🔐 Environment Variables
 Create a .env file in the project root directory with the following content:
-
 env
-Copy code
 DATABASE_URL="postgresql://postgres:password@db.supabase.co:5432/postgres"
 REDIS_URL="redis://default:password@redis-host:port"
 SUPABASE_URL=<SUPABASE_URL>
 SUPABASE_KEY=<SUPABASE_KEY>
+
 🧩 Coding Standards
 Category	Convention
 Language	TypeScript (strict mode)
@@ -233,9 +233,6 @@ Clone the repository and install dependencies.
 Follow the coding and color conventions.
 
 Run tests before committing:
-
-bash
-Copy code
 npm run test
 Ensure accessibility and responsive design.
 
@@ -245,11 +242,3 @@ Submit a PR with a clear, descriptive summary.
 Maintainer: daliasen16@gmail.com
 
 🧬 ProtiMart Seller Portal — Empowering sellers with AI, simplicity, and insights.
-
-yaml
-Copy code
-
----
-
-Would you like me to add **GitHub badges** (like build status, Node version, license, contributors) at the top?  
-They make the README look very professional — especially for public repositories.
