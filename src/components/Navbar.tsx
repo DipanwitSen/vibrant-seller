@@ -1,72 +1,110 @@
-import { Bell, LogOut, User } from "lucide-react";
-import { Button } from "./ui/button";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Package, BarChart3, ShoppingCart, Wallet, User, Bell, LogOut } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuTrigger,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
+} from "@/components/ui/dropdown-menu";
+import { useAuth } from "@/hooks/useAuth";
 
 const Navbar = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { signOut } = useAuth();
+
+  const handleSignOut = async () => {
+    await signOut();
+    navigate("/");
+  };
+
   return (
-    <nav className="sticky top-0 z-50 w-full border-b bg-gradient-to-r from-primary/95 to-primary/90 backdrop-blur supports-[backdrop-filter]:bg-gradient-to-r supports-[backdrop-filter]:from-primary/80 supports-[backdrop-filter]:to-primary/75">
-      <div className="container flex h-16 items-center justify-between px-6">
+    <nav className="sticky top-0 z-50 backdrop-blur-sm bg-gradient-to-r from-primary/10 to-accent/10 border-b">
+      <div className="container px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-8">
-          <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/20">
-              <span className="text-xl font-bold text-white">🏋️</span>
+          <Link to="/dashboard" className="flex items-center gap-2">
+            <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+              P
             </div>
-            <div>
-              <h1 className="text-lg font-bold text-white">
-                Protein Supplement <span className="text-white/90">Market</span>
-              </h1>
-            </div>
-          </div>
-          
-          <div className="hidden md:flex items-center gap-6">
-            <a href="/" className="text-sm font-medium text-white/90 hover:text-white transition-colors">
+            <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              ProtiMart
+            </h1>
+          </Link>
+
+          <nav className="hidden md:flex gap-6">
+            <Link
+              to="/dashboard"
+              className={`flex items-center gap-2 text-sm font-medium transition-colors ${
+                location.pathname === "/dashboard" ? "text-primary" : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              <BarChart3 className="h-4 w-4" />
               Dashboard
-            </a>
-            <a href="/products" className="text-sm font-medium text-white/90 hover:text-white transition-colors">
+            </Link>
+            <Link
+              to="/products"
+              className={`flex items-center gap-2 text-sm font-medium transition-colors ${
+                location.pathname === "/products" ? "text-primary" : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              <Package className="h-4 w-4" />
               Products
-            </a>
-            <a href="/inventory" className="text-sm font-medium text-white/90 hover:text-white transition-colors">
+            </Link>
+            <Link
+              to="/inventory"
+              className={`flex items-center gap-2 text-sm font-medium transition-colors ${
+                location.pathname === "/inventory" ? "text-primary" : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              <Package className="h-4 w-4" />
               Inventory
-            </a>
-            <a href="/orders" className="text-sm font-medium text-white/90 hover:text-white transition-colors">
+            </Link>
+            <Link
+              to="/orders"
+              className={`flex items-center gap-2 text-sm font-medium transition-colors ${
+                location.pathname === "/orders" ? "text-primary" : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              <ShoppingCart className="h-4 w-4" />
               Orders
-            </a>
-            <a href="/earnings" className="text-sm font-medium text-white/90 hover:text-white transition-colors">
+            </Link>
+            <Link
+              to="/earnings"
+              className={`flex items-center gap-2 text-sm font-medium transition-colors ${
+                location.pathname === "/earnings" ? "text-primary" : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              <Wallet className="h-4 w-4" />
               Earnings
-            </a>
-          </div>
+            </Link>
+          </nav>
         </div>
 
         <div className="flex items-center gap-3">
-          <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">
+          <Button variant="ghost" size="icon">
             <Bell className="h-5 w-5" />
           </Button>
           
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">
+              <Button variant="ghost" size="icon">
                 <User className="h-5 w-5" />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-56">
-              <DropdownMenuLabel>Seller Account</DropdownMenuLabel>
+            <DropdownMenuContent align="end">
+              <DropdownMenuLabel>My Account</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem asChild>
-                <a href="/account">Profile & Settings</a>
+              <DropdownMenuItem onClick={() => navigate("/account")}>
+                Profile & Settings
               </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <a href="/account">Bank Details</a>
+              <DropdownMenuItem onClick={() => navigate("/account")}>
+                Bank Details
               </DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem className="text-destructive">
-                <LogOut className="mr-2 h-4 w-4" />
+              <DropdownMenuItem className="text-destructive" onClick={handleSignOut}>
+                <LogOut className="h-4 w-4 mr-2" />
                 Logout
               </DropdownMenuItem>
             </DropdownMenuContent>

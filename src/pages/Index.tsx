@@ -5,6 +5,7 @@ import LowStockAlert from "@/components/LowStockAlert";
 import SalesChart from "@/components/SalesChart";
 import ProductPerformance from "@/components/ProductPerformance";
 import { Button } from "@/components/ui/button";
+import { CreateBundle } from "@/components/CreateBundle";
 
 const Index = () => {
   return (
@@ -21,10 +22,7 @@ const Index = () => {
             <p className="text-muted-foreground">Welcome back, seller!</p>
           </div>
           <div className="flex gap-3">
-            <Button variant="outline" className="gap-2">
-              <Plus className="h-4 w-4" />
-              Create Bundle
-            </Button>
+            <CreateBundle />
             <Button className="gap-2 bg-primary hover:bg-primary/90" asChild>
               <a href="/products">
                 <Plus className="h-4 w-4" />
