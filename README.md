@@ -1,204 +1,139 @@
-# Welcome to your Lovable project
+# 🏪 ProtiMart Seller Portal
 
-## Project info
+A modern **AI-assisted Seller Portal** for the **ProtiMart Marketplace**, enabling sellers to manage KYC, product listings, inventory, orders, payouts, and analytics — all in one place.
 
-**URL**: https://lovable.dev/projects/15676691-8142-4a63-b0aa-bb17541e3611
+🌐 **Project URL:** [ProtiMart on Lovable](https://lovable.dev/projects/15676691-8142-4a63-b0aa-bb17541e3611)  
+📦 **Version:** 1.0  
+🗓 **Last Updated:** October 22, 2025  
+🎨 **Theme:** Light (Default)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 📘 Table of Contents
+- [Project Overview](#project-overview)
+- [Folder Structure](#folder-structure)
+- [Tech Stack](#tech-stack)
+- [Setup & Running](#setup--running)
+- [Environment Variables](#environment-variables)
+- [Coding Standards](#coding-standards)
+- [Color Standards](#color-standards)
+- [Component Guidelines](#component-guidelines)
+- [API & Backend](#api--backend)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [Contact / Support](#contact--support)
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/15676691-8142-4a63-b0aa-bb17541e3611) and start prompting.
+## 🚀 Project Overview
 
-Changes made via Lovable will be committed automatically to this repo.
+**ProtiMart Seller Portal** is designed to empower sellers with smart, AI-driven tools for managing their marketplace presence.  
 
-**Use your preferred IDE**
+### ✨ Key Features
+- **AI-powered KYC Verification** (OCR + document parsing)
+- **AI Product Autofill** for instant product data entry
+- **Inventory Management** with real-time low-stock alerts
+- **Order & Return Management** with tracking
+- **Earnings Dashboard** with payouts and summaries
+- **Chatbot & Voice Assistant** for instant seller help
+- **Analytics Dashboard** with sales graphs and P&L insights
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📂 Folder Structure
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/15676691-8142-4a63-b0aa-bb17541e3611) and click on Share -> Publish.
-
-ProtiMart Seller Portal
-
-Version: 1.0
-Last Updated: October 22, 2025
-Theme: Light Theme (Default)
-
-Table of Contents
-
-Project Overview
-
-Folder Structure
-
-Tech Stack
-
-Setup & Running
-
-Coding Standards
-
-Color Standards
-
-Component Guidelines
-
-API & Backend
-
-Deployment
-
-Contributing
-
-Project Overview
-
-ProtiMart is a modern seller portal for a protein marketplace with a fully functional backend and AI-assisted features:
-
-Multi-step KYC Verification with OCR/AI
-
-Product Listing with AI autofill
-
-Inventory Management and low-stock alerts
-
-Order Management with tracking and feedback
-
-Earnings & Payout System
-
-Chatbot & Voice-enabled Assistant
-
-Analytics Dashboard with graphs and P&L summaries
-
-Folder Structure
 /seller-app
 ├── .next/
 ├── node_modules/
 ├── public/
-│   ├── images/
-│   ├── audio/                 # Chatbot voice/sound effects
-│   └── favicon.ico
+│ ├── images/
+│ ├── audio/ # Chatbot voice/sound effects
+│ └── favicon.ico
 ├── src/
-│   ├── app/
-│   │   ├── (auth)/            # Auth pages
-│   │   │   ├── login/
-│   │   │   ├── signup/
-│   │   │   ├── kyc/
-│   │   │   │   ├── page.tsx
-│   │   │   │   └── _components/KycFormSteps.tsx
-│   │   │   └── reset/
-│   │   ├── (dashboard)/       # Seller dashboard
-│   │   │   ├── overview/page.tsx
-│   │   │   ├── listings/
-│   │   │   │   ├── page.tsx
-│   │   │   │   ├── add/page.tsx
-│   │   │   │   ├── [productId]/page.tsx
-│   │   │   │   ├── drafts/page.tsx
-│   │   │   │   └── bulk-upload/page.tsx
-│   │   │   ├── inventory/page.tsx
-│   │   │   ├── orders/
-│   │   │   │   ├── page.tsx
-│   │   │   │   ├── [id]/page.tsx
-│   │   │   │   └── returns/page.tsx
-│   │   │   ├── earnings/page.tsx
-│   │   │   └── account/settings/page.tsx
-│   │   └── global-error.tsx
-│   ├── components/
-│   ├── common/                 # Shared UI components
-│   │   └── ChatWidget.tsx
-│   ├── modules/
-│   │   ├── auth/
-│   │   ├── listings/
-│   │   ├── inventory/
-│   │   ├── orders/
-│   │   ├── earnings/
-│   │   ├── analytics/
-│   │   └── notifications/
-│   ├── ui/
-│   ├── lib/
-│   │   ├── prismaClient.ts
-│   │   ├── supabaseClient.ts
-│   │   ├── redisClient.ts
-│   │   ├── kycApi.ts
-│   │   ├── payoutGatewayApi.ts
-│   │   ├── supabaseStorage.ts
-│   │   ├── constants.ts
-│   │   ├── utils.ts
-│   │   └── validators.ts
-│   ├── styles/
-│   │   └── globals.css
+│ ├── app/
+│ │ ├── (auth)/
+│ │ │ ├── login/
+│ │ │ ├── signup/
+│ │ │ ├── kyc/
+│ │ │ │ ├── page.tsx
+│ │ │ │ └── _components/KycFormSteps.tsx
+│ │ │ └── reset/
+│ │ ├── (dashboard)/
+│ │ │ ├── overview/page.tsx
+│ │ │ ├── listings/
+│ │ │ │ ├── page.tsx
+│ │ │ │ ├── add/page.tsx
+│ │ │ │ ├── [productId]/page.tsx
+│ │ │ │ ├── drafts/page.tsx
+│ │ │ │ └── bulk-upload/page.tsx
+│ │ │ ├── inventory/page.tsx
+│ │ │ ├── orders/
+│ │ │ │ ├── page.tsx
+│ │ │ │ ├── [id]/page.tsx
+│ │ │ │ └── returns/page.tsx
+│ │ │ ├── earnings/page.tsx
+│ │ │ └── account/settings/page.tsx
+│ │ └── global-error.tsx
+│ ├── components/
+│ ├── common/
+│ │ └── ChatWidget.tsx
+│ ├── modules/
+│ │ ├── auth/
+│ │ ├── listings/
+│ │ ├── inventory/
+│ │ ├── orders/
+│ │ ├── earnings/
+│ │ ├── analytics/
+│ │ └── notifications/
+│ ├── ui/
+│ ├── lib/
+│ │ ├── prismaClient.ts
+│ │ ├── supabaseClient.ts
+│ │ ├── redisClient.ts
+│ │ ├── kycApi.ts
+│ │ ├── payoutGatewayApi.ts
+│ │ ├── supabaseStorage.ts
+│ │ ├── constants.ts
+│ │ ├── utils.ts
+│ │ └── validators.ts
+│ ├── styles/
+│ │ └── globals.css
 ├── prisma/
-│   └── schema.prisma
+│ └── schema.prisma
 ├── next.config.mjs
 ├── package.json
 ├── tsconfig.json
 └── README.md
 
-Tech Stack
+---
 
-Framework: Next.js 15 (App Router)
+## 🧠 Tech Stack
 
-Language: TypeScript
+| Layer | Technology |
+|-------|-------------|
+| **Framework** | Next.js 15 (App Router) |
+| **Language** | TypeScript |
+| **Styling** | Tailwind CSS + shadcn-ui |
+| **State Management** | Redux Toolkit |
+| **Database** | PostgreSQL (via Prisma ORM on Supabase) |
+| **Caching** | Redis (ioredis) |
+| **Testing** | Jest + React Testing Library + Playwright |
+| **Auth** | Supabase Auth |
+| **AI Services** | OCR/AI Autofill (KYC + Product Data) |
+| **Chatbot** | Text + Voice (Speech-to-Text + TTS) |
 
-Styling: Tailwind CSS + shadcn-ui
+---
 
-State Management: Redux Toolkit
+## ⚙️ Setup & Running
 
-Database: PostgreSQL via Prisma ORM (Supabase)
+### 🧩 Prerequisites
+Ensure you have **Node.js** and **npm** installed.  
+You can install Node via **nvm**:  
+👉 [Install nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-Caching: Redis (ioredis)
+### 🔧 Steps
 
-Linting: ESLint + Prettier
-
-Testing: Jest + React Testing Library + Playwright
-
-Authentication: Supabase Auth
-
-AI: OCR/AI Autofill for KYC & Product
-
-Chatbot: Text + Voice integration
-
-Setup & Running
+```bash
 # Clone the repository
 git clone <YOUR_GIT_URL>
 cd seller-app
@@ -206,50 +141,36 @@ cd seller-app
 # Install dependencies
 npm install
 
-# Start development server
+# Start the development server
 npm run dev
 
-# Prisma migrations
+# Run Prisma migrations
 npx prisma migrate dev
+🔐 Environment Variables
 
-
-Environment Variables (.env):
+Create a .env file in the project root:
 
 DATABASE_URL="postgresql://postgres:password@db.supabase.co:5432/postgres"
 REDIS_URL="redis://default:password@redis-host:port"
 SUPABASE_URL=<SUPABASE_URL>
 SUPABASE_KEY=<SUPABASE_KEY>
 
-Coding Standards
+🧩 Coding Standards
+Category	Convention
+Language	TypeScript (strict mode)
+Components	Functional Components with Hooks
+Props/State	PascalCase interfaces (e.g., ProductType)
+Folders	kebab-case (e.g., user-auth/)
+Components	PascalCase (e.g., ProductCard.tsx)
+Utilities	lowercase (e.g., utils.ts)
+Functions	camelCase (e.g., handleClick)
+Variables	camelCase (e.g., userName)
+Constants	UPPER_SNAKE_CASE (e.g., API_URL)
+Hooks	Prefix with use (e.g., useAuth)
 
-Language: TypeScript for type safety
+All forms, buttons, and interactive components meet WCAG AA accessibility standards.
 
-Components: Functional components with hooks
-
-Props/State: PascalCase interfaces (e.g., ProductType)
-
-File Naming:
-
-Folders: kebab-case (user-auth)
-
-Component files: PascalCase (ProductCard.tsx)
-
-Utilities: lowercase (utils.ts)
-
-Functions: camelCase (handleClick)
-
-Variables: camelCase (userName)
-
-Constants: UPPER_SNAKE_CASE (API_URL)
-
-Hooks: Prefix with use (useAuth)
-
-Accessibility: All forms, buttons, and interactive components follow WCAG AA standards
-
-Color Standards
-
-Primary Palette:
-
+🎨 Color Standards
 Variable	Hex	Usage
 --primary	#ed1f5d	Buttons, CTAs, active links
 --primary-dark	#c91a52	Button hover states
@@ -259,9 +180,7 @@ Variable	Hex	Usage
 --text	#1a1a1a	Main text
 --text-muted	#6b6b6b	Secondary text
 --border	#e8e8e8	Dividers, borders
-
-Usage Example:
-
+Example
 <div className="bg-card border border-border text-text p-4 rounded-lg shadow-light">
   Product Card
 </div>
@@ -270,56 +189,68 @@ Usage Example:
   Add to Cart
 </button>
 
-Component Guidelines
+🧱 Component Guidelines
 
-Product Cards: Beautiful UI, hover effect, health score, allergen info, price, discount badge.
+Product Cards: Include price, discount badge, health score, allergens.
 
-Forms: Multi-step KYC, AI autofill, accessible labels, focus states with primary color.
+Forms: Multi-step KYC with AI autofill and clear focus states.
 
-Analytics Graphs: Chart colors standardized, tooltip and hover interactions.
+Analytics Graphs: Standardized colors and hover tooltips.
 
-Chatbot: Floating action button, voice and text input, proper shadows.
+Chatbot: Floating button, voice + text input, subtle animations.
 
-API & Backend
+🖥️ API & Backend
 
-API Routes: REST-style, Next.js App Router
+API Routes: REST-style via Next.js App Router
 
-Validation: Zod schemas (validators.ts)
+Validation: Zod Schemas (validators.ts)
 
-Database: Prisma ORM with type-safe queries
+Database: Prisma ORM (PostgreSQL)
 
-Caching: Redis for analytics, session storage
+Caching: Redis (Analytics & Sessions)
 
-Services: AI (OCR, health score), payout gateway, notification service
+Services:
 
-Deployment
+AI (OCR + Autofill)
 
-Open Lovable dashboard
+Payout Gateway
 
-Click Share -> Publish
+Notification Service
 
-(Optional) Connect custom domain in Project > Settings > Domains
+🚀 Deployment
 
-Contributing
+Open the Lovable Dashboard
 
-Clone repo & install dependencies
+Click Share → Publish
 
-Follow coding & color standards
+(Optional) Connect a custom domain via:
+Project → Settings → Domains → Connect Domain
 
-Run tests: npm run test
+📘 Lovable Docs: Setting up a Custom Domain
 
-Submit PR with clear description
+🤝 Contributing
 
-Ensure all new components follow accessible design principles
+Clone the repo & install dependencies
 
-Contact / Support
+Follow the coding and color standards
 
-Email: daliasen16@gmail.com
+Run tests before submitting PRs:
+
+npm run test
 
 
+Ensure accessibility and responsiveness
 
-Yes, you can!
+Submit a PR with a clear, descriptive summary
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+📧 Contact / Support
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Maintainer: daliasen16@gmail.com
+
+ProtiMart Seller Portal — Empowering sellers with AI, simplicity, and insights.
+
+
+---
+
+Would you like me to include **badges** (e.g., build status, license, version, Node version, etc.) at the top for GitHub polish?  
+I can also generate a **compact README** variant for your Lovable project dashboard.
