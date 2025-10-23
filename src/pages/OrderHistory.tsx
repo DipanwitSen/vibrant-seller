@@ -77,7 +77,7 @@ const OrderHistory = () => {
         .select(`
           *,
           order_items (*),
-          profiles:customer_id (full_name, phone)
+          profiles!orders_customer_id_fkey (full_name, phone)
         `)
         .eq("customer_id", user.id)
         .order("created_at", { ascending: false });

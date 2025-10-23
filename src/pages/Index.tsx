@@ -6,6 +6,7 @@ import SalesChart from "@/components/SalesChart";
 import ProductPerformance from "@/components/ProductPerformance";
 import { Button } from "@/components/ui/button";
 import { CreateBundle } from "@/components/CreateBundle";
+import VoiceAssistantButton from "@/components/VoiceAssistantButton";
 
 const Index = () => {
   return (
