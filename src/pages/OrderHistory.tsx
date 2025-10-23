@@ -28,7 +28,7 @@ interface Order {
   profiles?: {
     full_name: string;
     phone: string;
-  };
+  } | null;
 }
 
 interface Feedback {
@@ -76,14 +76,27 @@ const OrderHistory = () => {
         .from("orders")
         .select(`
           *,
-          order_items (*),
-          profiles!orders_customer_id_fkey (full_name, phone)
+          order_items (*)
         `)
         .eq("customer_id", user.id)
         .order("created_at", { ascending: false });
 
       if (error) throw error;
-      setOrders(data || []);
+      
+      // Fetch profile data separately for each order
+      const ordersWithProfiles = await Promise.all(
+        (data || []).map(async (order) => {
+          const { data: profile } = await supabase
+            .from("profiles")
+            .select("full_name, phone")
+            .eq("id", order.customer_id)
+            .single();
+          
+          return { ...order, profiles: profile };
+        })
+      );
+      
+      setOrders(ordersWithProfiles);
     } catch (error) {
       console.error("Error fetching orders:", error);
     } finally {
