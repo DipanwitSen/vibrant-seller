@@ -12,6 +12,8 @@ import Orders from "./pages/Orders";
 import Earnings from "./pages/Earnings";
 import Account from "./pages/Account";
 import NotFound from "./pages/NotFound";
+import KYCUpload from "./pages/KYCUpload";
+import OrderHistory from "./pages/OrderHistory";
 import { useAuth } from "./hooks/useAuth";
 
 const queryClient = new QueryClient();
@@ -45,6 +47,8 @@ const App = () => (
           <Route path="/orders" element={<ProtectedRoute><Orders /></ProtectedRoute>} />
           <Route path="/earnings" element={<ProtectedRoute><Earnings /></ProtectedRoute>} />
           <Route path="/account" element={<ProtectedRoute><Account /></ProtectedRoute>} />
+          <Route path="/kyc-upload" element={<ProtectedRoute><KYCUpload /></ProtectedRoute>} />
+          <Route path="/order-history" element={<ProtectedRoute><OrderHistory /></ProtectedRoute>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

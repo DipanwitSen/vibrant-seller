@@ -53,6 +53,7 @@ const Index = () => {
           </div>
         </div>
       </main>
+      <VoiceAssistantButton />
     </div>
   );
 };
